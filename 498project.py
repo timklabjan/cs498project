@@ -32,3 +32,4 @@ model = model.fit(x_train,y_train)
 #get predictions and accuracy
 pred = model.predict(x_test)
 print(accuracy_score(y_test,pred))
+print(accuracy_score(y_test,np.random.choice(['0','1','2','3','4','5','6','7','8','9'],size=len(y_test),replace=True)))
