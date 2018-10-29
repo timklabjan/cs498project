@@ -1,0 +1,5 @@
+With features presented as a bag of words and using a default logistic regression model, we obtain an accuracy of 0.288.
+If we were to randomly assign topics 0-9 to the test data we obtain an accuracy of right about 0.10. Since the accuracy of the baseline model
+is significantly greater than the accuracy of random guessing, we can conclude that the textual description of the content
+does have predictive power in determining the topic of said content. With more advanced feature engineering and model tuning, we
+should be able to obtain an accuracy greater than that of our baseline model.
