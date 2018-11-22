@@ -1,0 +1,36 @@
+import pandas as pd
+import numpy as np
+import seaborn as sns
+import tensorflow as tf
+
+
+data = pd.read_csv("content_topic_prediction/Topic_prediction_data_train.txt",sep='\t',header=None)
+data.columns = ['text','uid','type','timestamp']
+labels = pd.read_csv("content_topic_prediction/Topic_prediction_labels_train.txt",sep='\t',header=None)
+labels.columns = ['label']
+data['label'] = labels['label']
+
+
+
+
+print(data.head())
+
+print(len(data[data["text"].isnull()]))  #check for nulls
+
+
+# remove rows that have null text
+data = data[(data['text'].notnull())]
+
+
+alltext = [i.split(' ') for i in data["text"]]
+textlength = [len(i.split(' ')) for i in data["text"]]
+
+print(max(textlength)) #check for max length of reviews
+
+#find all unique words
+all_list =  []
+for i in range(len(alltext)):
+    all_list.extend(alltext[i])
+unique=list(set(all_list))
+print(len(unique))
+
