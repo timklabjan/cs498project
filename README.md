@@ -5,7 +5,7 @@ We have two scripts to produce predictions, one based on an ensemble of classica
 The pickle, sys, numpy, and pandas packages are necessary to run model_predictions_ensemble.py.
 To obtain the predictions simply execute: 
 
-python model_predictions_ensemble.py <path-to-dataset>
+python model_predictions_ensemble.py "path-to-dataset"
 
 Results will be written to a file named "ensemble_output.txt"
 
@@ -15,8 +15,8 @@ We have also exprerimented with a Bidirectional recurrent neural network archite
 The code for this is in the RNN folder.
 The training along with test results are shown in the Topic Prediction using Bidir LSTM-Training.ipynb file.
 
-To run inference - python rnn_inference.py <path-to-dataset>
+To run inference - python rnn_inference.py "path-to-dataset"
 
 Note: This is an experimental classifier to try an alternative approach & not the main classifier used for final predictions for this project. Thus its performance is not to be taken into account. 
 
-By - Tim klabjan, Subhrajit Bhowmik
+By - Tim Klabjan (klabjan2), Subhrajit Bhowmik (bhowmik4)
